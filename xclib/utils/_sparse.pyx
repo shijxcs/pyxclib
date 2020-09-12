@@ -44,8 +44,8 @@ def read_file_safe(f, dtype, bint zero_based, bint query_id,
     else:
         dtype = np.float64
         data = array.array("d")
-    indices = array.array("l")
-    indptr = array.array("l", [0])
+    indices = array.array("q")
+    indptr = array.array("q", [0])
     query = np.arange(0, dtype=np.int64)
 
     if offset > 0:
@@ -126,8 +126,8 @@ def read_file(f, dtype, bint zero_based, bint query_id,
     else:
         dtype = np.float64
         data = array.array("d")
-    rows = array.array("l")
-    cols = array.array("l")
+    rows = array.array("q")
+    cols = array.array("q")
     query = np.arange(0, dtype=np.int64)
 
     if offset > 0:
